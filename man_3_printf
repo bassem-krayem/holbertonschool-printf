@@ -1,0 +1,117 @@
+.TH _printf 3 "March 30, 2023" "Version 1.0" "User Commands"
+
+.SH NAME
+\fB_printf\fR \- clone of the standard printf function to write formatted data to the standard output.
+
+.SH SYNOPSIS
+.P
+\fBint _printf(const char *format, ...);\fR
+
+.P
+\fB#include "main.h"\fR
+
+.SH DESCRIPTION
+The \fB_printf\fR function replicates the behavior of the standard \fBprintf\fR function and is designed to print formatted output to the standard output stream.
+The function scans the string and writes each character to the standard output. When encountering a conversion specifier, the function will call other functions via a va_list, which will convert and write the following characters according to the functions invoked.
+
+.SH CONVERSION SPECIFIERS
+
+.TP 10
+\fB%c:\fR 
+Prints a single character.
+
+.TP 10
+\fB%s:\fR 
+Prints a null-terminated string of characters.
+
+.TP 10
+\fB%%:\fR 
+Prints a single percent sign.
+
+.TP 10
+\fB%d:\fR 
+Prints a decimal number.
+
+.TP 10
+\fB%i:\fR 
+Prints an integer number.
+
+.TP 10
+\fB%u:\fR 
+Prints an unsigned decimal integer.
+
+.TP 10
+\fB%o:\fR 
+Prints an octal number.
+
+.TP 10
+\fB%x:\fR 
+Prints a hexadecimal number using lowercase letters for `a` through `f`.
+
+.TP 10
+\fB%X:\fR 
+Prints a hexadecimal number using uppercase letters for `A` through `F`.
+
+.TP 10
+\fB%p:\fR 
+Prints a pointer address.
+
+.PP
+\fBFlags, Field Width, Precision, Length Modifier:\fR
+This simplified version of \fB_printf\fR does not support flags, field width, precision, or length modifiers.
+
+.SH RETURN VALUE
+The function returns the number of characters printed (excluding the null byte used to end the output to strings).
+If format is NULL or ends with a %, the function returns -1.
+
+.SH EXAMPLES
+The following examples illustrate the use of the \fB_printf\fR function:
+
+\fBint len = _printf("Let's try to printf a simple sentence.\\n");\fR
+\fBOutput: "Let's try to printf a simple sentence."\\n\fR
+
+\fB_printf("Length:[%d, %i]\\n", len, len);\fR
+\fBOutput: "Length:[39, 39]".\fR
+
+\fB_printf("Negative:[%d]\\n", -762534);\fR
+\fBOutput: "Negative:[-762534]".\fR
+
+\fB_printf("Unsigned:[%u]\\n", (unsigned int)INT_MAX + 1024);\fR
+\fBOutput: "Unsigned:[2147484671]".\fR
+
+\fB_printf("Unsigned octal:[%o]\\n", (unsigned int)INT_MAX + 1024);\fR
+\fBOutput: "Unsigned octal:[20000001777]".\fR
+
+\fB_printf("Unsigned hexadecimal:[%x, %X]\\n", (unsigned int)INT_MAX + 1024, (unsigned int)INT_MAX + 1024);\fR
+\fBOutput: "Unsigned hexadecimal:[7fffffff, 7FFFFFFF]".\fR
+
+\fB_printf("Character:[%c]\\n", 'H');\fR
+\fBOutput: "Character:[H]".\fR
+
+\fB_printf("String:[%s]\\n", "I am a string !");\fR
+\fBOutput: "String:[I am a string !]".\fR
+
+\fB_printf("Address:[%p]\\n", (void *)0x7ffe637541f0);\fR
+\fBOutput: "Address:[0x7ffe637541f0]".\fR
+
+\fBint len = _printf("Percent:[%%]\\n");\fR
+\fBOutput: "Percent:[%]".\fR
+
+\fB_printf("Len:[%d]\\n", len);\fR
+\fBOutput: "Len:[12]".\fR
+
+\fB_printf("Unknown:[%r]\\n");\fR
+\fBOutput: "Unknown:[%r]".\fR
+
+.SH AUTHORS
+.P
+Written by \fBBassem Krayem.\fR
+
+.SH COPYRIGHT
+.P
+Copyright (C) 2024, Bassem Krayem.
+This is free software: feel free to change and redistribute it.
+NO WARRANTY, to the extent permitted by law.
+
+.SH DATE
+March 30, 2024
