@@ -7,6 +7,7 @@
  *
  * Return: length of the string
  */
+ 
 int _printf(const char * const format, ...)
 {
 	spec_t spec_list[] = {
@@ -15,17 +16,16 @@ int _printf(const char * const format, ...)
 		{'o', print_octal}, {'X', print_HEX}, {'x', print_hex},
 		{'p', print_address}, {'\0', NULL}};
 
-	va_list args;
-	int count = 0, i = 0, j = 0;
-
 	va_start(args, format);
-	if (!format)
+	if (format == NULL)
 		return (-1);
-	while (format && format[i])
+	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1])
+		if (format[i] == '%')
 		{
-			while (spec_list[j].c)
+			if (format[i + 1] == '\0')
+				return (-1);
+			while (spec_list[j].c != '\0')
 			{
 				if (format[i + 1] == spec_list[j].c)
 				{
@@ -34,19 +34,21 @@ int _printf(const char * const format, ...)
 				}
 				j++;
 			}
-			if (!spec_list[j].c)
+			if (spec_list[j].c == '\0')
 			{
-				count += _putchar('%');
+				count += _putchar(format[i]);
 				count += _putchar(format[i + 1]);
 			}
 			j = 0;
-			i += 2;
+			i++;
 		}
 		else
 		{
-			count += _putchar(format[i]);
-			i++;
-		}}
+			_putchar(format[i]);
+			count++;
+		}
+		i++;
+	}
 	va_end(args);
 	return (count);
 }
