@@ -11,7 +11,7 @@
 int _printf(const char * const format, ...)
 {
 	va_list args;
-	int count = 0, j = 0;
+	int count = 0, j = 0, i = 0;
 	spec_t spec_list[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
@@ -23,7 +23,7 @@ int _printf(const char * const format, ...)
 	if (format == NULL)
 		return (-1);
 	
-	for (int i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
