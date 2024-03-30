@@ -7,15 +7,16 @@
  *
  * Return: length of the string
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-	va_list args;
-	int count = 0, i = 0, j = 0;
 	spec_t spec_list[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
 		{'o', print_octal}, {'X', print_HEX}, {'x', print_hex},
 		{'p', print_address}, {'\0', NULL}};
+
+	va_list args;
+	int count = 0, i = 0, j = 0;
 
 	va_start(args, format);
 	if (!format)
