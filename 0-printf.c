@@ -7,9 +7,11 @@
  *
  * Return: length of the string
  */
- 
+
 int _printf(const char * const format, ...)
 {
+	va_list args;
+	int count = 0, i = 0, j = 0;
 	spec_t spec_list[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
@@ -20,7 +22,7 @@ int _printf(const char * const format, ...)
 	if (format == NULL)
 		return (-1);
 	while (format != NULL && format[i] != '\0')
-	{
+{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
@@ -41,14 +43,13 @@ int _printf(const char * const format, ...)
 			}
 			j = 0;
 			i++;
-		}
-		else
+		} else
 		{
 			_putchar(format[i]);
 			count++;
 		}
 		i++;
-	}
+		}
 	va_end(args);
 	return (count);
 }
