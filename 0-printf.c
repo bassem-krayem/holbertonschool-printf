@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			}
 			if (!spec_list[j].c)
 			{
-				count += _putchar(format[i]);
+				count += _putchar('%');
 				count += _putchar(format[i + 1]);
 			}
 			j = 0;
