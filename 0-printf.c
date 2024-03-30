@@ -12,13 +12,10 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0, i = 0, j = 0;
 	spec_t spec_list[] = {
-		{'c', print_char}, {'s', print_string},
-		{'%', print_percent}, {'d', print_decimal},
-		{'i', print_decimal}, {'u', print_unsigned},
-		{'o', print_octal}, {'X', print_HEX},
-		{'x', print_hex}, {'p', print_address},
-		{'\0', NULL}
-	};
+		{'c', print_char}, {'s', print_string}, {'%', print_percent},
+		{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
+		{'o', print_octal}, {'X', print_HEX}, {'x', print_hex},
+		{'p', print_address}, {'\0', NULL}};
 
 	va_start(args, format);
 	if (!format)
@@ -37,14 +34,18 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			if (!spec_list[j].c)
-				count += _putchar(format[i]) + _putchar(format[i + 1]);
+			{
+				count += _putchar(format[i]);
+				count += _putchar(format[i + 1]);
+			}
 			j = 0;
-			i++;
+			i += 2;
 		}
 		else
+		{
 			count += _putchar(format[i]);
-		i++;
-	}
+			i++;
+		}}
 	va_end(args);
 	return (count);
 }
