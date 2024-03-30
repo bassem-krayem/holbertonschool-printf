@@ -16,13 +16,11 @@ int _printf(const char * const format, ...)
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
 		{'o', print_octal}, {'X', print_HEX}, {'x', print_hex},
-		{'p', print_address}, {'\0', NULL}
-	};
+		{'p', print_address}, {'\0', NULL}};
 
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-	
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -48,8 +46,7 @@ int _printf(const char * const format, ...)
 		{
 			_putchar(format[i]);
 			count++;
-		}
-	}
+		}}
 	va_end(args);
 	return (count);
 }
