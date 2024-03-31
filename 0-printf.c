@@ -8,7 +8,7 @@
  * Return: length of the string
  */
 
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0, j = 0, i = 0;
