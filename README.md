@@ -118,8 +118,7 @@ int main(void)
     return (0);
 }
 
-### Output
-
+*Output*
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -145,7 +144,7 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 
-## Man page ##
+## Man page
 
 More information with the command: `man ./man_3_printf.3` or on our man page
 
