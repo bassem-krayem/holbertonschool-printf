@@ -19,7 +19,7 @@ The Printf project is a customized implementation of the printf function in the 
 The objective of this project is to create our own printf function to understand the underlying concepts related to variable arguments and format specifiers in C.
 
 ## Compilation command
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
+
 
 ## Requirements
 
@@ -150,10 +150,4 @@ More information with the command: `man ./man_3_printf.3` or on our man page
 
 ## Installation
 
-1.  Clone this repository on your local machine:
-2.  Compile the source files with the following command:
-
-## Authors
-
-#### Bassem krayem
--   Github: [@bassem-krayem](https://github.com/bassem-krayem)
+1.  Clone this repository on your local
