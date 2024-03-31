@@ -145,7 +145,7 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 
-## Man page
+## Man page ##
 
 More information with the command: `man ./man_3_printf.3` or on our man page
 
