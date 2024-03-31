@@ -152,9 +152,7 @@ More information with the command: `man ./man_3_printf.3` or on our man page
 ## Installation
 
 1.  Clone this repository on your local machine:
-
 2.  Compile the source files with the following command:
-
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 
 ## Authors
