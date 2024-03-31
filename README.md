@@ -82,7 +82,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format \*.c -o printf
  *
  * Return: Always 0
  */
-
 int main(void)
 {
     int len;
@@ -119,7 +118,8 @@ int main(void)
     return (0);
 }
 
-*Output*
+### Output
+
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -153,6 +153,7 @@ More information with the command: `man ./man_3_printf.3` or on our man page
 
 1.  Clone this repository on your local machine:
 2.  Compile the source files with the following command:
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 
 ## Authors
 
