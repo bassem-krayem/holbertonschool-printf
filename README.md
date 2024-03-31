@@ -69,7 +69,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 
 ## Examples and tests
 
-###Input
+### Input
 
 ```c
 #include <limits.h>
@@ -118,7 +118,7 @@ int main(void)
     return (0);
 }
 
-###Output
+### Output
 
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
