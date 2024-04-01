@@ -4,15 +4,15 @@ The Printf project is a customized implementation of the printf function in the 
 
 ## Table of Contents
 
--   [Objective](#Objective)
--	[Compilation command](#Compilation-command)	
--   [Requirements](#Requirements)
--   [Mandatory Tasks](#Mandatory-tasks)
--   [Specifiers](#Specifiers)
--	[Examples and tests](#Examples-and-tests)
--	[Man page](#Man-page)
--   [Installation](#Installation)
--   [Authors](#Authors)
+- [Objective](#Objective)
+- [Compilation command](#Compilation-command)
+- [Requirements](#Requirements)
+- [Mandatory Tasks](#Mandatory-tasks)
+- [Specifiers](#Specifiers)
+- [Examples and tests](#Examples-and-tests)
+- [Man page](#Man-page)
+- [Installation](#Installation)
+- [Authors](#Authors)
 
 ## Objective
 
@@ -24,34 +24,34 @@ The objective of this project is to create our own printf function to understand
 
 ## Requirements
 
--	Allowed editors: `vi`, `vim`, `emacs`
--   All files will be compiled on Ubuntu 20.04 LTS
--   Code must follow the `Betty` style
--   Global variables are not allowed
--	No more than  functions per file
--	All prototypes for functions should be included in our header file `main.h`
--   Authorized functions and macros:
-	- write (man 2 write)
-	- malloc (man 3 malloc)
-	- free (man 3 free)
-	- va_start (man 3 va_start)
-	- va_end (man 3 va_end)
-	- va_copy (man 3 va_copy)
-	- va_arg (man 3 va_arg)
+- Allowed editors: `vi`, `vim`, `emacs`
+- All files will be compiled on Ubuntu 20.04 LTS
+- Code must follow the `Betty` style
+- Global variables are not allowed
+- No more than functions per file
+- All prototypes for functions should be included in our header file `main.h`
+- Authorized functions and macros:
+  - write (man 2 write)
+  - malloc (man 3 malloc)
+  - free (man 3 free)
+  - va_start (man 3 va_start)
+  - va_end (man 3 va_end)
+  - va_copy (man 3 va_copy)
+  - va_arg (man 3 va_arg)
 
 ## Mandatory Tasks
 
 ### Task 0
-	
--   Write a function that produces output according to a format and the following conversion specifiers `c`, `s`, and `%`.
+
+- Write a function that produces output according to a format and the following conversion specifiers `c`, `s`, and `%`.
 
 ### Task 1
 
--   Handle the following conversion specifiers `d`, `i`.
+- Handle the following conversion specifiers `d`, `i`.
 
 ### Task 2
 
--   Create a man page for your function.
+- Create a man page for your function.
 
 ## Specifiers
 
@@ -72,7 +72,7 @@ The objective of this project is to create our own printf function to understand
 
 My own tests in comparison with the standard printf function(main.c file):
 
-*Input*
+_Input_
 
 ```c
 #include <limits.h>
@@ -121,9 +121,9 @@ int main(void)
 }
 ```
 
-*Output*
+_Output_
 
-```
+````
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -161,6 +161,8 @@ More information with the command: `./man_3_printf` or `man printf`
 
 ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf```
 
+
 ## Authors
 #### bassem krayem
 -   Github: [@bassem-krayem](https://github.com/bassem-krayem/)
+````
