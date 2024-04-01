@@ -147,8 +147,11 @@ Percent:[%]
 Len:[12]
 Len:[12]
 Unknown:[%r]
-Unknown:[%r]```
+Unknown:[%r]
+```
+
 ## Man page
+
 More information with the command: `./man_3_printf` or `man printf`
 
 ## Installation
@@ -160,9 +163,4 @@ More information with the command: `./man_3_printf` or `man printf`
 2.  Compile the source files with the following command:
 
 ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf```
-
-
-## Authors
-#### bassem krayem
--   Github: [@bassem-krayem](https://github.com/bassem-krayem/)
 ````
